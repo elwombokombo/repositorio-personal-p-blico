@@ -13,6 +13,34 @@ namespace ClassLibrary
     /// </summary>
     public class Train
     {
+        private int count=0;
+        private string nombre;
+        public void setCount(int count)
+        {
+            this.count=count;
+        }
+        public int getCount()
+        {
+            return this.count;
+        }
+        public void setNombre(string nombre)
+        {
+            this.nombre=nombre;
+        }
+        public string getNombre()
+        {
+            return this.nombre;
+        }
+        public Train (string nombre)
+        {
+            count+=1;
+            Console.WriteLine("Trabajando el constructor, un tornillo agregado");
+        }
+        ~Train()
+        {
+            count--;
+            Console.WriteLine("Trabajando el destructor, un tornillo quitado");
+        } 
         /// <summary>
         /// Obtiene un valor que indica si las maquinas del tren han sido encendidas o no.
         /// </summary>
